@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Mid-Project - Full Stack Development Course 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my **Mid-Project** for the Full Stack Development course! This React.js application demonstrates the integration of multiple features like user management, todos, and posts, showcasing key aspects of React development.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Project Overview**
+This project is a dynamic web application built using **React.js** and integrates with the **JSONPlaceholder API** to fetch and manage data for:
+- **Users**: Display, edit, add, and delete user information.
+- **ToDos**: Manage user-specific todos, including marking them as completed.
+- **Posts**: Add and display posts for a selected user.
 
-### `npm start`
+The application is designed to provide an intuitive and user-friendly interface with a focus on functionality and interactivity.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **Key Features**
+1. **User Management**:
+   - Search users by name or email.
+   - Edit user details like name and email directly.
+   - Add or delete users.
+   - Display additional user data (address information) on hover.
 
-### `npm test`
+2. **ToDos Management**:
+   - View todos for the selected user.
+   - Add new todos with a title.
+   - Mark todos as completed or not completed.
+   - Highlight users with pending (uncompleted) todos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Posts Management**:
+   - View posts for the selected user.
+   - Add new posts with a title and body.
 
-### `npm run build`
+4. **Responsive UI**:
+   - Dynamic user selection with color-coded highlighting.
+   - Hover effects for additional user data.
+   - Clean, organized layout with sections for users, todos, and posts.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## **Technologies Used**
+- **React.js**: A JavaScript library for building user interfaces.
+- **CSS**: For styling and layout design.
+- **JSONPlaceholder API**: Mock API for fetching users, todos, and posts.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## **Setup Instructions**
+To run the project locally, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nisanhe/mid-project.git
+   cd mid-project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Contact
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For any questions or feedback, feel free to reach out:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Email: nisanhender@gmail.com
+    GitHub: nisanhe
+    Linkdin: Nisan Hender
