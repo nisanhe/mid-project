@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_IMAGE = "nisanhe/my-react-app:latest"
+        DOCKERHUB_USER = "YOUR_USERNAME"
+        DOCKERHUB_PASS = credentials('dockerhub-password')
+        KUBECONFIG = "YOUR_PATH_FOR_MINIKUBE"
+    }
+
+    stages {
+        stage('Clone Repo') {
+            steps {
+                git 'https://github.com/nisanhe/mid-project.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t $DOCKER_IMAGE .'
+            }
+        }
+
+        stage('Push to Docker Hub') {
+            steps {
+                sh """
+                  echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USER" --password-stdin
+                  docker push $DOCKER_IMAGE
+                """
+            }
+        }
+
+        stage('Deploy to Minikube') {
+            steps {
+                script {
+                    sh 'kubectl config use-context minikube'
+                    sh 'kubectl apply -f deployment.yaml'
+                }
+            }
+        }
+    }
+}
