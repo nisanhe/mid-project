@@ -158,12 +158,6 @@ This will return a local URL to access your React app in a browser.
 - ❌ Docker login fails in Jenkins – Ensure you saved the DockerHub **access token** correctly in Jenkins credentials.
 
 ---
-
-## Author
-
-**Nisan Hender**  
-GitHub: [@nisanhe](https://github.com/nisanhe)
-
 Contact
 
 For any questions or feedback, feel free to reach out:
