@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "nisanhe/my-react-app:latest"
+        DOCKER_IMAGE = "nisanhe/DevOps-CICD-Project:latest"
         DOCKERHUB_USER = "nisanhe"
         DOCKERHUB_PASS = credentials('dockerhub-password')
         KUBECONFIG = "/home/nisan/.kube/config"
