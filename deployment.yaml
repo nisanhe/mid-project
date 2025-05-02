@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-react-app-deployment
+  name: DevOps-CICD-Project-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my-react-app
+      app: DevOps-CICD-Project
   template:
     metadata:
       labels:
-        app: my-react-app
+        app: DevOps-CICD-Project
     spec:
       containers:
-      - name: my-react-app
-        image: nisanhe/my-react-app:latest
+      - name: DevOps-CICD-Project
+        image: nisanhe/DevOps-CICD-Project:latest
         ports:
         - containerPort: 80
