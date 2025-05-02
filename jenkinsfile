@@ -5,7 +5,7 @@ pipeline {
         DOCKER_IMAGE = "nisanhe/devops-cicd-project:latest"
         DOCKERHUB_USER = "nisanhe"
         DOCKERHUB_PASS = credentials('dockerhub-password')
-        KUBECONFIG = "/home/nisan/.kube/config"
+        KUBECONFIG = "/home/YOUR_PATH/.kube/config"
     }
 
     stages {
@@ -15,35 +15,20 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Build Docker Image and push') {
             steps {
                 sh 'docker build --no-cache -t $DOCKER_IMAGE .'
-            }
-        }
-
-        stage('Push to Docker Hub') {
-            steps {
                 sh """
-                  echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USER" --password-stdin
+                  docker login -u "$DOCKERHUB_USER" --password-stdin
                   docker push $DOCKER_IMAGE
                 """
             }
         }
-
-        stage('Deploy to Minikube') {
+        stage('Deploy to Minikube and apply service') {
             steps {
                 script {
                     sh 'kubectl config use-context minikube'
                     sh 'kubectl apply -f deployment.yaml'
-
-                }
-            }
-        }
-        stage('service'){
-            steps{
-                script{
-
-                    sh 'cat service.yaml'
                     sh 'kubectl apply -f service.yaml'
                 }
             }
