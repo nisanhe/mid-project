@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: DevOps-CICD-Project-deployment
+  name: devops-cicd-project-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: DevOps-CICD-Project
+      app: devops-cicd-project
   template:
     metadata:
       labels:
-        app: DevOps-CICD-Project
+        app: devops-cicd-project
     spec:
       containers:
-      - name: DevOps-CICD-Project
-        image: nisanhe/DevOps-CICD-Project:latest
+      - name: devops-cicd-project
+        image: nisanhe/devops-cicd-project:latest
         ports:
         - containerPort: 80
