@@ -87,34 +87,11 @@ Verify that the correct context is set:
 kubectl config use-context minikube
 ```
 
-### 2. Install Jenkins
+### 2. Jenkins Pipeline Configuration
 
-Example (Snap):
+Copy the contents of the `jenkins` file into a new Jenkins Pipeline job (Pipeline Script).
 
-```bash
-sudo snap install jenkins --classic
-```
-
-Or use Docker/manual as preferred.
-
----
-
-### 3. Create DockerHub Credentials in Jenkins
-
-1. Go to `http://localhost:8080`
-2. Navigate to: **Manage Jenkins → Credentials → (Global)**
-3. Add a new credential:
-   - **Kind**: Secret text
-   - **ID**: `dockerhub-password`
-   - **Secret**: your **DockerHub Access Token**
-
----
-
-### 4. Jenkins Pipeline Configuration
-
-Copy the contents of the `jenkins_project.txt` file into a new Jenkins Pipeline job (Pipeline Script).
-
-### 5. GitHub Repo Structure
+### 3. GitHub Repo Structure
 
 Ensure your GitHub repository includes the following:
 
@@ -140,7 +117,7 @@ Once the setup is complete, trigger a build from Jenkins (**Build Now**). The pi
 After a successful deployment, run:
 
 ```bash
-minikube service my-react-app-service --url
+minikube service devops-cicd-project-service --url
 ```
 
 This will return a local URL to access your React app in a browser.
